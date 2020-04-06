@@ -1,0 +1,31 @@
+@import '~antd/lib/style/themes/index.less';
+
+.app {
+  &__title {
+    margin: 20px 0;
+    padding: 10px;
+    font-size: 14px;
+    font-weight: 700;
+    background-color: #f8f8f8;
+  }
+
+  &__type {
+    &-wrap {
+      display: flex;
+      flex-wrap: wrap;
+    }
+
+    position: relative;
+    margin-right: 10px;
+    padding: 12px 0;
+    text-align: center;
+    width: 115px;
+    border-radius: 2px;
+    border: 1px solid #cacaca;
+    cursor: pointer;
+
+    &--active {
+      border-color: @primary-color;
+    }
+  }
+}

@@ -5,7 +5,7 @@ function PageWrap({ children, className }: { children: React.ReactNode; classNam
     <div
       className={className}
       style={{
-        padding: '20px',
+        padding: '20px 20px 10px',
         boxShadow: '0 2px 12px 0 rgba(0,0,0,.1)',
         width: '100%',
       }}

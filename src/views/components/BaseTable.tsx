@@ -37,12 +37,14 @@ function BaseTable<T extends { id?: number }>(props: BaseTableProps<T>) {
       bordered
       {...resetProps}
       onChange={onTableChange}
-      style={{ marginTop: '40px' }}
+      style={{ marginTop: '30px' }}
       dataSource={list}
+      size="middle"
       rowKey={record => `${record.id}`}
       pagination={{
         ...pagination,
         total: page.dataTotal,
+        size: 'default',
       }}
     >
       {props.children}

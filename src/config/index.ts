@@ -56,7 +56,7 @@ const AdminConfig: Config = {
   colorWeak: false,
 
   // 项目名称
-  title: 'React Ant Admin',
+  title: '小程序运维系统',
 
   // logo
 };

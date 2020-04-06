@@ -1,4 +1,4 @@
-import React, { useMemo, memo } from 'react';
+import React, { useMemo } from 'react';
 import Helmet from 'react-helmet';
 import { Route } from 'react-router-dom';
 import { IRoute } from '../router/config';
@@ -45,4 +45,4 @@ function MainRoutes() {
   return <AsyncRoutes>{routeList}</AsyncRoutes>;
 }
 
-export default memo(MainRoutes);
+export default MainRoutes;

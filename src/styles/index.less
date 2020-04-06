@@ -1,3 +1,4 @@
+@import '~antd/lib/style/themes/index.less';
 @import './var.less';
 @import './md.css';
 
@@ -11,6 +12,11 @@
 }
 
 .align {
+  &--center {
+    display: flex;
+    justify-content: center;
+  }
+
   &--between {
     display: flex;
     justify-content: space-between;
@@ -46,3 +52,37 @@
     align-items: flex-end;
   }
 }
+
+.base {
+  &--show {
+    display: block;
+  }
+
+  &--hide {
+    display: none;
+  }
+}
+
+// @primary-color: @blue-6;
+// @info-color: @blue-6;
+// @success-color: @green-6;
+// @processing-color: @blue-6;
+// @error-color: @red-5;
+// @highlight-color: @red-5;
+// @warning-color: @gold-6;
+// @normal-color: #d9d9d9;
+// @white: #fff;
+// @black: #000;
+
+.primary-color {
+  color: @primary-color !important;
+}
+
+.primary-border-color {
+  border-color: @primary-color !important;
+}
+
+.primary-bg-color {
+  background-color: @primary-color !important;
+}
+

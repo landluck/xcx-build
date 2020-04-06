@@ -32,7 +32,7 @@ const routes: IRoute[] = [
     path: '/system',
     component: React.lazy(() => import('../layout/UserLayout')),
     meta: {
-      title: '系统路由',
+      title: '小程序运维系统',
     },
     redirect: '/system/login',
     children: [
@@ -94,18 +94,48 @@ const routes: IRoute[] = [
       },
       // 项目管理菜单
       {
-        path: '/project',
+        path: '/app',
         meta: {
-          title: '项目管理',
+          title: '应用管理',
         },
-        redirect: '/project/index',
+        redirect: '/app/index',
         children: [
           {
-            path: '/project/index',
-            component: React.lazy(() => import('../views/project/index')),
+            path: '/app/index',
+            component: React.lazy(() => import('../views/app/index/index')),
             meta: {
-              title: '项目列表',
+              title: '应用列表',
             },
+          },
+          {
+            path: '/app/add/:id',
+            component: React.lazy(() => import('../views/app/addOrEdit')),
+            meta: {
+              title: '添加应用',
+            },
+          },
+          {
+            path: '/app/code/:id',
+            component: React.lazy(() => import('../views/app/code/index')),
+            meta: {
+              title: '打码',
+            },
+          },
+        ],
+      },
+      {
+        path: '/docs',
+        meta: {
+          title: '文档中心',
+        },
+        redirect: '/docs/index',
+        children: [
+          {
+            path: '/docs/index',
+            meta: {
+              title: '文档列表',
+            },
+            component: React.lazy(() => import('../views/docs/index')),
           },
         ],
       },

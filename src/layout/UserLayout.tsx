@@ -4,6 +4,7 @@ import { Route, Switch, Link } from 'react-router-dom';
 import { Spin, Result, Button, Layout, Typography } from 'antd';
 import { getPageTitle, systemRouteList } from '../router/utils';
 import { IRoute } from '../router/config';
+import AdminConfig from '../config/index';
 import './UserLayout.less';
 
 interface UserLayoutState {
@@ -52,10 +53,10 @@ class UserLayout extends React.PureComponent<any, UserLayoutState> {
             <div className="top">
               <Typography.Title className="header">
                 <Link to="/">
-                  <span className="title">React Ant Admin </span>
+                  <span className="title">{ AdminConfig.title } </span>
                 </Link>
               </Typography.Title>
-              <div className="desc">React Ant Admin 是 Admin 这条街最靓的仔</div>
+              <div className="desc">专为小程序服务的运维系统</div>
             </div>
             <Suspense fallback={<Spin className="layout__loading" />}>
               <Switch>
@@ -66,7 +67,7 @@ class UserLayout extends React.PureComponent<any, UserLayoutState> {
             </Suspense>
           </div>
           <Layout.Footer style={{ textAlign: 'center' }}>
-            React Ant Admin 是 Admin 这条街最靓的仔
+            { AdminConfig.title } 是这条街最靓的仔
           </Layout.Footer>
         </div>
       </>
